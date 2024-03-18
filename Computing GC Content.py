@@ -5,7 +5,7 @@ with open('Downloads/rosalind_gc(2).txt') as file:
 gc = 0
 name = ''
 string=None
-bigname = None
+name = None
 for i, item in enumerate(dna):
 	if item.startswith('>'):
 		name = item[1:]
@@ -20,6 +20,6 @@ for i, item in enumerate(dna):
 			gcpercent = (g+c)/len(string) * 100
 			if gcpercent > gc:
 				gc = gcpercent
-				bigname = name
+				name = name
 
-print(bigname,gc)
+print(name,gc)
